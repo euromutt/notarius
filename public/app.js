@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
       document.getElementById('avatar-image').setAttribute('src', person.avatarUrl())
     }
     document.getElementById('section-1').style.display = 'none'
-    document.getElementById('section-2').style.display = 'block'
+    document.getElementById('section-2').style.display = 'none'
+    document.getElementById('section-3').style.display = 'block'
   }
 
   if (blockstack.isUserSignedIn()) {
