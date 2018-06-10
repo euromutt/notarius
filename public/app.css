@@ -1,7 +1,7 @@
 /* Globals */
 a,a:focus,a:hover{color:#fff;}
-html,body{height:100%;background-color:#00ff99;}
-body{color:#000;text-align:center;}
+html,body{height:100%;background-color:#00ff99; width: 50%; height: 100%;}
+body{color:#000;text-align:center; }
 .hide{display:none;}
 .landing-heading{font-family:'Source Code Pro',monospace;font-weight:400;}
 
