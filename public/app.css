@@ -1,6 +1,6 @@
 /* Globals */
 a,a:focus,a:hover{color:#fff;}
-html,body{background-color:#ffffff; justify-content: center;}
+html,body{background-color:#ffffff; justify-content: center; padding-top: 35px;}
 img{display: block; margin-left: auto; margin-right: auto; min-width: 450px;}
 body{color:#000;}
 .hide{display:none;}
