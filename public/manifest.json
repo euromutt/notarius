@@ -3,7 +3,7 @@
   "start_url": "localhost:5000",
   "description": "A decentralized notary service",
   "icons": [{
-    "src": "https://drive.google.com/file/d/1pMwFQIxvwCJrKXpCgkdnRhf73lOY4Raf/view?usp=sharing",
+    "src": "icon-192x192.png",
     "sizes": "192x192",
     "type": "image/png"
   }]
