@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     document.getElementById('section-1').style.display = 'none'
     document.getElementById('section-2').style.display = 'none'
-    document.getElementById('section-3').style.display = 'block'
+    document.getElementById('section-3').style.display = 'inline'
   }
 
   if (blockstack.isUserSignedIn()) {
