@@ -1,8 +1,6 @@
 /* Globals */
 a,a:focus,a:hover{color:#fff;}
-html,body{background-color:#ffffff; justify-content: center; padding-top: 35px;}
-
-body{color:#000;}
+html,body{background-color:#ffffff; color:#000; justify-content: center; padding-top: 35px; font-family:'Source Code Pro',monospace;font-weight:400; font-size: 20px; font}
 .hide{display:none;}
 .landing-heading{font-family:'Source Code Pro',monospace;font-weight:400;}
 
