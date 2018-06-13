@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     blockstack.signUserOut(window.location.href)
   })
 
+  document.getElementById('section-1').style.display = 'inline'
+  document.getElementById('section-2').style.display = 'inline'
+  document.getElementById('section-3').style.display = 'none'
+
   function showProfile(profile) {
     var person = new blockstack.Person(profile)
     document.getElementById('heading-name').innerHTML = person.name() ? person.name() : "Nameless Person"
