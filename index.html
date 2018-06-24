@@ -18,6 +18,24 @@
         axios.get('https://api-r.bitcoinchain.com/v1/status').then(function(result) {
           foo = result.data.height;
       })}
+
+    function getEstimate(){
+        axios.get('https://core.blockstack.org/v1/prices/names/' + document.getElementById('username').value).then(function(estimate) {
+        foo2 = estimate.data.total_estimated_cost.btc;
+        estimate = estimate.data.total_estimated_cost.satoshis;
+        var value5 = estimate;
+        document.getElementById('btc').value = value5;
+      })}
+
+    function getUSDBTC(){
+        axios.get('https://www.bitstamp.net/api/v2/ticker/btcusd/?cors=1').then(function(usdbtc) {
+        usdbtc = usdbtc.data.last;
+        var value6 = usdbtc;
+        var value7 = foo2;
+        var value8 = "$" + parseFloat((value6) * (value7)).toFixed(2);
+        document.getElementById('usd').value = value8;
+      })}
+
     function getDate(){
         axios.get('https://core.blockstack.org/v1/names/' + document.getElementById('username').value).then(function(response) {
         foo1 = response.data.expire_block;
@@ -35,13 +53,11 @@
         var someFormattedDate = mm + '/' + dd + '/' + y;
         document.getElementById('expire_Date').value = someFormattedDate;
         })}
-    </script>
-    <script>
 
     </script>
     <title>Utilidapp</title>
 </head>
-<body onload="getBlock();">
+<body onload="getBlock()">
 
   <nav class="navbar bg-primary navbar-dark navbar-expand-sm">
     <div class="container">
@@ -85,8 +101,7 @@
     </div>
 
 <div class="form-group">
-    <input class="btn btn-primary" type="button" onclick="getDate()" value="Submit"/>
-    <small  class="form-text text-muted">*If no date is returned ID is unregistered or invalid*</small>
+    <input class="btn btn-primary" type="button" onclick="getDate(); getEstimate(); getUSDBTC()" value="Submit"/>
 </div>
 
 <div class="form-group">
@@ -97,6 +112,16 @@
 <div class="form-group">
   <label class="form-control-label" for="ownername">Blocks Till Expiration</label>
     <input class="form-control" id="blocks" type="text"/>
+</div>
+
+<div class="form-group">
+  <label class="form-control-label" for="ownername">Satoshis for ID</label>
+    <input class="form-control" id="btc" type="text"/>
+</div>
+
+<div class="form-group">
+  <label class="form-control-label" for="ownername">USD for ID</label>
+    <input class="form-control" id="usd" type="text"/>
 </div>
 
 </fieldset>
